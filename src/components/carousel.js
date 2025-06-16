@@ -31,15 +31,17 @@ const financialProducts = [
 ];
 
 export default function Carousel() {
+  const [indexNumber, setIndexNumber] = useState(0);
+
   return (
     <div className="carousel">
       <button>⬅️</button>
       <Info
-        name={financialProducts[index]}
-        type={financialProducts[index]}
-        riskLevel={financialProducts[index]}
-        returnRate={financialProducts[index]}
-        description={financialProducts[index]}
+        name={financialProducts[indexNumber].name}
+        type={financialProducts[indexNumber].type}
+        riskLevel={financialProducts[indexNumber].riskLevel}
+        returnRate={financialProducts[indexNumber].returnRate}
+        description={financialProducts[indexNumber].description}
       />
       <button>➡️</button>
     </div>
